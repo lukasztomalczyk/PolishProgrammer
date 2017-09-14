@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+   
+
+}
+@model IEnumerable<PolishProgramer.Models.BlogPost>
+
+<div class="post-list group">
+
+        @{
+            int howMenyItem = 0;
+
+            foreach (var item in Model)
+            {
+                if (howMenyItem == 0)
+                {
+                    @: <div class="post-row">
+                    Html.RenderPartial("~/Views/Blog/_PostsInHomePage.cshtml", item);
+                    howMenyItem = 1; }
+                else
+                {
+                    Html.RenderPartial("~/Views/Blog/_PostsInHomePage.cshtml", item);
+                    howMenyItem = 0;
+                    @: </div>
+                 }
+            }
+            if(howMenyItem == 1)
+            {
+                @: </div>
+
+            }
+
+           }
+            
+</div>
+
+
+
+        

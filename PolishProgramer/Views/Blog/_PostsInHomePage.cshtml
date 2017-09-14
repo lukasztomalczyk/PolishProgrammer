@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model BlogPost
+@{ 
+
+    
+}
+
+
+<article id="@Model.Id" class="group post-2854 post type-post status-publish format-image has-post-thumbnail hentry category-mixed tag-algae tag-detox tag-smoothie post_format-post-format-image">
+    <div class="post-inner post-hover">
+
+        <div class="post-thumbnail">
+            <a href="Blog/ShowPost/@Model.Id" title="C">
+                <img width="520" height="245" src="@Url.Content("~/")wp-content/uploads/sites/9/2013/10/photo-1423753623104-718aaace6772-520x245.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="" >
+            </a>
+            <a class="post-comments" href="2013/10/31/climbing-up-to-get-a-great-view-of-the-city/index.html#comments"><span><i class="fa fa-comments-o"></i>2</span></a>
+        </div><!--/.post-thumbnail-->
+
+        <div class="post-meta group">
+            <p class="post-category"><a href="Blog/Category/" rel="category tag"></a></p>
+            <p class="post-date">@Model.DateTime</p>
+        </div><!--/.post-meta-->
+
+        <h2 class="post-title">
+            <a href="2013/10/31/riding-bike-on-the-golden-gate-bridge-of-san-fransisco/index.html" rel="bookmark" title="Riding Bike On The Golden Gate Bridge of San Fransisco">Riding Bike On The Golden Gate Bridge of San Fransisco</a>
+        </h2><!--/.post-title-->
+
+        <div class="entry excerpt">
+            <p>@EditPostContent.ShowTheFirstNchatacters(Model.Text, 200)</p>
+        </div><!--/.entry-->
+
+    </div><!--/.post-inner-->
+</article>
